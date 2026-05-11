@@ -1,71 +1,78 @@
 # SyringeGUI
-Python-based GUI to control stepping motor-controlled syringe pumps.
+Python-based GUI to control stepping motor-controlled syringe pumps.  
 
-This project provide you with the tools to control DIY syringe pumps (max. 3 pumps) connected to Ardiuno device.
+This project provides you with the tools to control DIY syringe pumps (max. 3 pumps) connected to Ardiuno device.  
 
 
 ## Hardware requirements
-
+	
 - DIY syringe pumps consisted of stepping motors and an actuator such as lead screws and slider. 
 - As control devices, 1x Arduino Uno/Nano and stepping motor drivers (as many as needed) like DRV8825, A4988, etc.
-- Option: CNC shield v3.0 for Arduino Uno or CNC shield v4.0 forr Arduino Nano
-  * You can use only highest microstepping of the stepper driver with CNC shield v4.0 if the board is not modified.
+- Option: CNC shield v3.0 for Arduino Uno or CNC shield v4.0 forr Arduino Nano  
+  ** You can use only the highest microstepping for your stepper driver with CNC shield v4.0 if the board is not modified.
 - Any computers that can run Python 3.10 or higher (Mac, Win, Linux, or Raspberry Pi )
 
-You can find many good instructions on making DIY syringe pumps. I was really impressed and inspired by the "poseidon" system to start this project.
+You can find many good instructions on making DIY syringe pumps. I was really impressed and inspired by the **"poseidon"** system to start this project.
 
-https://github.com/pachterlab/poseidon
+https://github.com/pachterlab/poseidon  
+https://www.instructables.com/DIY-Syringe-Pump/  
+https://chem.uncg.edu/croatt/flow-chemistry/building-the-syringe-pump/  
+https://reprap.org/wiki/Open-source_syringe_pump  
+https://www.mass-spec.ru/projects/diy/syringe_pump/eng/  
+  
+Note: In this project, syringe pumps were bought from a chinese company.  
 
-https://www.instructables.com/DIY-Syringe-Pump/
-
-https://chem.uncg.edu/croatt/flow-chemistry/building-the-syringe-pump/
-
-https://reprap.org/wiki/Open-source_syringe_pump
-
-https://www.mass-spec.ru/projects/diy/syringe_pump/eng/
-
-
-Note: In this project, syringe pumps were bought from a chinese company.
-
-
+	
 ## Software Installation Guide
 
-This project consists of two main tools:
+This project consists of two main tools:  
 
-	SyringeGUI: The main controller for the syringe pumps.
+    SyringeGUI:
+        The main controller for the syringe pumps.
 
-	Config Generator: A utility to create and manage config.json for different mechanical setups and syringe types.
+    Config Generator:
+        A utility to create and manage config.json for different mechanical setups and syringe types.
 
-Prerequisites
+Prerequisites  
 
-	Python 3.10 or higher is recommended.
+	- Python 3.10 or higher is recommended.  
 
-	pip (Python package installer).
+	- pip (Python package installer).  
 
-1. Multi-Platform Installation
+      This GUI is built using Python's standard tkinter library and pyserial.  
 
-Open your terminal (Command Prompt/PowerShell for Windows) and follow these steps:
-Step 1: Clone the Repository
-Bash
 
-git clone https://github.com/yourusername/syringe-pump-controller.git
-cd syringe-pump-controller
+### 1. Multi-Platform Installation  
 
-Step 2: Install Dependencies
+Open your terminal (Command Prompt/PowerShell for Windows) and follow these steps: 
 
-The GUI is built using Python's standard tkinter library and pyserial.
-Bash
+#### Step 1: Clone the Repository
 
-pip install pyserial
+    git clone https://github.com/hiro-shikata/SyringeGUI.git
+    cd SyringeGUI
+
+#### Step 2: Update Python3
+
+    pip3 install --upgrade pip
+
+#### Step 3: Install Dependencies
+
+    pip install pyserial
 
 Important Note for Linux & Raspberry Pi OS:
-Tkinter is often not included by default in Linux distributions. Please run:
-Bash
+Tkinter is often not included by default in Linux distributions.  
+Please run:
 
-sudo apt-get update
-sudo apt-get install python3-tk
+    sudo apt update
+    sudo apt install python3-pip
+    pip3 install pyserial
 
-2. OS-Specific Instructions & Notes
+    If you have a problem of installing pyserial, please try to install it on venv (virtualenv):
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install pyserial
+
+### 2. OS-Specific Instructions & Notes
 💻 Windows
 
     Port Discovery: Look for COM ports (e.g., COM3) in the Device Manager.
@@ -89,7 +96,7 @@ sudo apt-get install python3-tk
 
     CPU Load: On older Raspberry Pi models, high-frequency GUI updates might cause slight lag.
 
-3. Usage
+### 3. Usage
 Setting up your Hardware
 
     Run the Config Generator to define your pump's mechanical settings (Steps/mm, Max Rate, etc.).
@@ -101,8 +108,8 @@ Setting up your Hardware
 
 Running the Controller
 Bash
-
-python SyringeGUI.py
+    python --version         # To know the version of Python3
+    python3.XX SyringeGUI.py #XX is the version
 
 ⚠️ Critical Calibration Notes
 
