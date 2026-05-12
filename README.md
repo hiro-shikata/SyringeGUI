@@ -10,17 +10,28 @@ This project provides you with the tools to control DIY syringe pumps (max. 3 pu
 - As control devices, 1x Arduino Uno/Nano and stepping motor drivers (as many as needed) like DRV8825, A4988, etc.
 - Option: CNC shield v3.0 for Arduino Uno or CNC shield v4.0 forr Arduino Nano  
   ** You can use only the highest microstepping for your stepper driver with CNC shield v4.0 if the board is not modified.
-- Any computers that can run Python 3.10 or higher (Mac, Win, Linux, or Raspberry Pi )
+- Any computers that can run Python 3.10 or higher (Mac, Win, Linux, or Raspberry Pi)
 
-You can find many good instructions on making DIY syringe pumps. I was really impressed and inspired by the **"poseidon"** system to start this project.
+You can find many good instructions on making DIY syringe pumps. To start this project, I was really impressed and inspired by the **"poseidon"** system.
 
-https://github.com/pachterlab/poseidon  
-https://www.instructables.com/DIY-Syringe-Pump/  
-https://chem.uncg.edu/croatt/flow-chemistry/building-the-syringe-pump/  
-https://reprap.org/wiki/Open-source_syringe_pump  
-https://www.mass-spec.ru/projects/diy/syringe_pump/eng/  
+1. https://github.com/pachterlab/poseidon  
+2. https://www.instructables.com/DIY-Syringe-Pump/  
+3. https://chem.uncg.edu/croatt/flow-chemistry/building-the-syringe-pump/  
+4. https://reprap.org/wiki/Open-source_syringe_pump  
+5. https://www.mass-spec.ru/projects/diy/syringe_pump/eng/  
   
-Note: In this project, syringe pumps were bought from a chinese company.  
+Note: In this project, syringe pumps were obtained from a chinese company.  
+
+
+### Tips on preparation of Hardware  
+#### 1. Assembly of Arduino Uno + CNC shield v3.0 + motor drivers  
+The details are well describe in link 1 (https://github.com/pachterlab/poseidon). Here I just tell you techinical tips to adjust the Vref (reference voltage) for stepping motor drivers, such as DRV8825 and A4988. This adjustment is important for making the most of motor function besides avoiding the heating of the motor and drivers. For this process, you need an electrical tester to check the voltage.  
+
+
+
+
+#### 2. Installation of GRBL Library into Arduino
+
 
 	
 ## Software Installation Guide
