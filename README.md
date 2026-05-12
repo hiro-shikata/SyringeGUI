@@ -43,6 +43,7 @@ https://www.circuitist.com/how-to-set-driver-current-a4988-drv8825-tmc2208-tmc22
 To know the rated current, you can check the datasheet of stepping motor. 0.8-2.0 A for NEMA17 motors, which are mostly used in DIY syringe pumps.
 
 *Photo*
+test[https://qiita.com/h1na/items/d305d49b5a27e92d132a]
 
 #### 2. Installation of GRBL Library into Arduino
 Before you run the **SyringeGUI** software, you needs to **flash Arduino with a sketch**, which includes script to control stepping motors with GRBL library.  
