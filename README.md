@@ -13,7 +13,7 @@ This project provides you with the tools to control DIY syringe pumps (max. 3 pu
 - AC-to-DC converter (12V, at least 3A for 2 pumps)  
 - **Any computers that can run Python 3.10 or higher** (Mac, Win, Linux, or Raspberry Pi)
 
-You can find many good instructions on making DIY syringe pumps. To start this project, I was really impressed and inspired by the [**"poseidon"** system](https://github.com/pachterlab/poseidon).
+You can find many good instructions on making DIY syringe pumps. To start this project, I was really impressed and inspired by the [**"poseidon"**](https://github.com/pachterlab/poseidon) system.
 
 1. https://github.com/pachterlab/poseidon  
 2. https://www.instructables.com/DIY-Syringe-Pump/  
@@ -96,7 +96,9 @@ Prerequisites
 
 Open your terminal (Command Prompt/PowerShell for Windows) and follow these steps: 
 
-#### Step 1: Clone the Repository  
+#### Step 1: Download ZIP files or Clone the Repository  
+
+Download "SyringeGUI.py", "Config-Generator_v1.py", and "config.json".
 
 	Bash
 
