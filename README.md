@@ -177,8 +177,19 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 	python3 --version         			# Check the installed Python 3 version
     python3.XX config-generator_v1.py	# Replace XX with your actual version (e.g., python3.10)
 
-**Save the generated file as `XXX.json` (replace XXX with your desired name) in the directory `~/SyringeGUI_Data/CONFIG`.**  
-
+1. At **Tab 1: Pump Settings**, please choose a method to specify the **`Steps/mm` value**, which is the most crucial setting for this system.
+   - **A. Step Angle**: Stepping motors rotate at a specific angle (e.g., 0.9°, 1.8°, or 18°) per step (pulse) received from the Arduino device. Please check the specifications of your stepping motor. For standard NEMA17 motors, this angle is typically **`1.8°`**.   
+   - **B. Microstepping**: Specify the microstepping setting configured on your motor driver. This is determined by the jumper pin configuration on your CNC shield and the driver's specifications. For example, when using a DRV8825 driver on a CNC shield v3.0 with M0, M1, and M2 all set to HIGH (all three jumper pins set), it enables **`1/32`** microstepping.   
+   - **C. Gear Ratio**: This setting is optional. Since general DIY syringe pumps do not utilize gears, simply enter **`1`** in this box. If your specific hardware setup includes a gear assembly between the motor and the lead screw, please specify that precise ratio.  
+   - **D. Lead Screw Pitch**: You can enter the pitch value directly, or calculate it by measuring the number of threads within a specific physical length.
+   *photo*  
+2. 2. Specify the values for **`Max rate (mm/min)`**, **`Accel (mm/sec²)`**, and **`Max Travel Distance (mm)`** according to the on-screen instructions.  
+3. Fill out the settings for all active pumps. Alternatively, you can check the box at the top to instantly copy the configuration of Pump X to the other pump columns.  
+4. At **Tab 2: Syringe Settings**, you can register and manage your syringe profiles. You only need to provide a **`Name`**, **`Volume (mL)`**, and **`Length (mm)`** for each syringe.  
+*photo*  
+   **Tip for Accuracy: For the highest precision, it is highly recommended to calibrate this value by measuring the weight of the dispensed water using a precision weighing scale (mass-to-volume calibration).**
+   6. 5. Click **`Generate New Config File`** to save your settings. Save the generated file as `XXX.json` (replace XXX with your desired configuration name) into the directory **`~/SyringeGUI_Data/CONFIG`**.. 
+  
 - You can also modify existing JSON files using this app. It is easier to load the distributed default `onfig.json` first.  
 - You can generate and use multiple JSON files as needed (e.g., if you run different pump systems with a single controller).  
 - If no JSON files are found in the directory, SyringeGUI will automatically fall back to its internal default settings.  
@@ -190,6 +201,8 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 - **Rate Limitation**: For Arduino Uno/Nano based setups, ensure your Max Rate does not exceed the theoretical limit calculated in the `config-generator_v1`. Exceeding a 20kHz pulse frequency may cause the stepper motor to stall or behave unpredictably.
 
 - **Invert Direction**: Check this setting in the `config-generator_v1` if your pump moves in the opposite direction than expected.
+
+- **Syringe 
 
 <br>
 <br>
@@ -276,6 +289,8 @@ The configuration CSV file must follow this exact format:
 	Y, 0, 120, 100
 	Z, 90, 120, 50
 
+*photo*  
+
 
 **How it executes:**
 - **From 0 to 60 sec**: Pump X moves at 100 µL/min, and Pump Y moves at 100 µL/min.
@@ -312,4 +327,6 @@ To achieve maximum pumping accuracy, performing a physical calibration is highly
 6. Calculate your new calibrated Steps/mm value using this formula:  
    **`Calibrated Steps/mm = Current Steps/mm × (X / |A - B|)`**  
 7. Launch the **`Config-Generator`** utility, open your JSON config file, and update the Steps/mm field with this new calibrated value. 
-8. Save the file, reload it into SyringeGUI, and click **`Sync to Grbl EEPROM`** to commit the change to your hardware.  
+8. Save the file, reload it into SyringeGUI, and click **`Sync to Grbl EEPROM`** to commit the change to your hardware.
+  
+*photo*  
