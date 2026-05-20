@@ -161,14 +161,16 @@ Permissions: You might need permission to access the serial port. Add your user 
 
     (Please Log out and log back in for changes to take effect.)
 
-    CPU Load: On older Raspberry Pi models, high-frequency GUI updates might cause slight lag.
+    CPU Load: On older Raspberry Pi models, high-frequency GUI updates might cause slight lag.  
+
+**The code for Raspberry Pi OS is distributed as `Syringe_GUI_raspi.py`, where the GUI appearance is optimized for `Raspberry Pi 7-inch Touch Screen Display` or its alternatives.**
 
 <br>
 <br>	
 
 ### 2. Setting Up Your Hardware Config File
 
-Run the `Config-Generator` app to define your pump's mechanical settings (Steps/mm, Max Rate, etc.). While you can modify these settings via the Arduino IDE, using this interactive app is much easier.  
+Run the `config-generator` app to define your pump's mechanical settings (Steps/mm, Max Rate, etc.). While you can modify these settings via the Arduino IDE, using this interactive app is much easier.  
 
 	Bash
 
@@ -185,9 +187,9 @@ Run the `Config-Generator` app to define your pump's mechanical settings (Steps/
 
 ⚠️ Setting Notes
 
-- **Rate Limitation**: For Arduino Uno/Nano based setups, ensure your Max Rate does not exceed the theoretical limit calculated in the `Config-Generator_v1`. Exceeding a 20kHz pulse frequency may cause the stepper motor to stall or behave unpredictably.
+- **Rate Limitation**: For Arduino Uno/Nano based setups, ensure your Max Rate does not exceed the theoretical limit calculated in the `config-generator_v1`. Exceeding a 20kHz pulse frequency may cause the stepper motor to stall or behave unpredictably.
 
-- **Invert Direction**: Check this setting in the `Config-Generator_v1` if your pump moves in the opposite direction than expected.
+- **Invert Direction**: Check this setting in the `config-generator_v1` if your pump moves in the opposite direction than expected.
 
 <br>
 <br>
