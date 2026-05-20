@@ -7,6 +7,7 @@ The coding for this project was assisted by AI. Please feel free to report any b
 
 <br>
 <br>
+<img src="" width="400px">
 
 ## Hardware
 	
