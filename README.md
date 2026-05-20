@@ -1,13 +1,15 @@
 # SyringeGUI
-Python-based GUI to control stepping motor-controlled syringe pumps.  
+**Python-based GUI to control stepping motor-controlled syringe pumps.** 
 
-This project provides you with the tools to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
+This project provides you with the tools, **`SyringeGUI`** and its **`config-generator`**, to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
 
 The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.
 
+
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px">
+
 <br>
 <br>
-<img src="" width="400px">
 
 ## Hardware
 	
