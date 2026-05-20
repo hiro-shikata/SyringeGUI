@@ -161,9 +161,20 @@ Permissions: You might need permission to access the serial port. Add your user 
 
     (Please Log out and log back in for changes to take effect.)
 
-    CPU Load: On older Raspberry Pi models, high-frequency GUI updates might cause slight lag.  
+    CPU Load: On older Raspberry Pi models, high-frequency GUI updates might cause slight lag. 
 
-**The code for Raspberry Pi OS is distributed as `Syringe_GUI_raspi.py`, where the GUI appearance is optimized for `Raspberry Pi 7-inch Touch Screen Display` or its alternatives.**
+If you use `venv` to install `pyserial`, you need to activate `venv` before running `SyringeGUI.py`.  
+
+	Bash
+
+	source /home/USER/venv/bin/activate		# Replace USER with your USER directory
+	
+	python3 /home/PATH/SyringeGUI_raspi.py	# Replace PATH with your path to locate the `SyringeGUI`
+  
+Alternatively, you can use `Desktop Entry` as a shootcut to run `SyringeGUI` without operating `Terminal`. Please replace PATH on the distributed `SyringeGUI.desktop` file with your correct path. Then, please place the file on your desktop or somewhere and just click it.  
+  
+
+The code for Raspberry Pi OS is distributed as `Syringe_GUI_raspi.py`, where the GUI appearance is optimized for `Raspberry Pi 7-inch Touch Screen Display` or its alternatives.  
 
 <br>
 <br>	
@@ -183,7 +194,7 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
    - **C. Gear Ratio**: This setting is optional. Since general DIY syringe pumps do not utilize gears, simply enter **`1`** in this box. If your specific hardware setup includes a gear assembly between the motor and the lead screw, please specify that precise ratio.  
    - **D. Lead Screw Pitch**: You can enter the pitch value directly, or calculate it by measuring the number of threads within a specific physical length.
    *photo*  
-2. 2. Specify the values for **`Max rate (mm/min)`**, **`Accel (mm/sec²)`**, and **`Max Travel Distance (mm)`** according to the on-screen instructions.  
+2. Specify the values for **`Max rate (mm/min)`**, **`Accel (mm/sec²)`**, and **`Max Travel Distance (mm)`** according to the on-screen instructions.  
 3. Fill out the settings for all active pumps. Alternatively, you can check the box at the top to instantly copy the configuration of Pump X to the other pump columns.  
 4. At **Tab 2: Syringe Settings**, you can register and manage your syringe profiles. You only need to provide a **`Name`**, **`Volume (mL)`**, and **`Length (mm)`** for each syringe.  
 *photo*  
@@ -330,3 +341,13 @@ To achieve maximum pumping accuracy, performing a physical calibration is highly
 8. Save the file, reload it into SyringeGUI, and click **`Sync to Grbl EEPROM`** to commit the change to your hardware.
   
 *photo*  
+<br>
+<br>
+
+# Fundings
+This project was supported by the grants from the `Japan Society for the Promotion of Science` (Grant# JP24H01499) and the `Kato Memorial Bioscience Foundation`.
+<br>
+<br>
+
+# License
+Licensed under the MIT License.
