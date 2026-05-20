@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=SyringeGUI
+Comment=Start SyringeGUI App
+Exec=lxterminal -e bash -c "source /home/USER/venv/bin/activate && python3 /home/PATH/SyringeGUI_raspi.py; exec bash"
+Icon=utilities-terminal
+Terminal=false
+Categories=Application;
+

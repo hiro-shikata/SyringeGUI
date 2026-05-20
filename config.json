@@ -1,0 +1,26 @@
+{
+	"config_file_name": "config.json",
+	"_comment-syringe": "values = volume (mL) / syringe length (mm)", 
+	"syringes": {
+        "1 mL (Zelostat)": 0.01798561,
+        "2.5 mL (Terumo)": 0.06337136,
+        "10 mL (Terumo)": 0.19704433
+    },
+	"_comment-grbl_settings": "values in $100-102, number of steps required to move by 1 mm; $110-112, max rate (mm/min); $120-122, acceleration; $130-132, max travel (mm)", 
+    "grbl_settings": {
+		"$1": "255",
+		"$3": "0",
+        "$100": "6400",
+        "$101": "6400",
+        "$102": "6400",
+        "$110": "200.000",
+        "$111": "200.000",
+        "$112": "200.000",
+        "$120": "50.000",
+        "$121": "50.000",
+        "$122": "50.000",
+        "$130": "130.000",
+        "$131": "130.000",
+        "$132": "130.000"
+    }
+}
