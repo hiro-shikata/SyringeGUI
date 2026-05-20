@@ -204,7 +204,7 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 3. Fill out the settings for all active pumps. Alternatively, you can check the box at the top to instantly copy the configuration of Pump X to the other pump columns.  
 4. At **Tab 2: Syringe Settings**, you can register and manage your syringe profiles. You only need to provide a **`Name`**, **`Volume (mL)`**, and **`Length (mm)`** for each syringe.  
 
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-add-syringe.jpg" width="500px">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-add-syringe.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_updateed-syringe-list.jpg" width="500px">
 
    **Tip for Accuracy: For the highest precision, it is highly recommended to calibrate this value by measuring the weight of the dispensed water using a precision weighing scale (mass-to-volume calibration).**
    6. 5. Click **`Generate New Config File`** to save your settings. Save the generated file as `XXX.json` (replace XXX with your desired configuration name) into the directory **`~/SyringeGUI_Data/CONFIG`**.. 
