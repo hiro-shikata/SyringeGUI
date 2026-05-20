@@ -204,7 +204,12 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 
 1. At **Tab 1: Pump Settings**, please choose a method to specify the **`Steps/mm` value**, which is the most crucial setting for this system.
    - **A. Step Angle**: Stepping motors rotate at a specific angle (e.g., 0.9°, 1.8°, or 18°) per step (pulse) received from the Arduino device. Please check the specifications of your stepping motor. For standard NEMA17 motors, this angle is typically **`1.8°`**.   
-   - **B. Microstepping**: Specify the microstepping setting configured on your motor driver. This is determined by the jumper pin configuration on your CNC shield and the driver's specifications. For example, when using a DRV8825 driver on a CNC shield v3.0 with M0, M1, and M2 all set to HIGH (all three jumper pins set), it enables **`1/32`** microstepping.   
+   - **B. Microstepping**: Specify the microstepping setting configured on your motor driver. This is determined by the jumper pin configuration on your CNC shield and the driver's specifications. For example, when using a DRV8825 driver on a CNC shield v3.0 with M0, M1, and M2 all set to HIGH (all three jumper pins set), it enables **`1/32`** microstepping.
+
+<div align="center">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/microstepping_DRV8825-on-CNCshieldv3.jpg" width="350px"> 
+</div>
+
    - **C. Gear Ratio**: This setting is optional. Since general DIY syringe pumps do not utilize gears, simply enter **`1`** in this box. If your specific hardware setup includes a gear assembly between the motor and the lead screw, please specify that precise ratio.  
    - **D. Lead Screw Pitch**: You can enter the pitch value directly, or calculate it by measuring the number of threads within a specific physical length.  
 
