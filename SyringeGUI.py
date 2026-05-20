@@ -520,7 +520,6 @@ def update_recipe_graph(recipe_data=None):
     canvas_z = globals().get("canvas_z")
 
     if canvas_x is None or canvas_y is None or canvas_z is None:
-        print("DEBUG: Canvases not found!") # デバッグ用
         return
 
     canvas_x.delete("all")
