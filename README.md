@@ -171,10 +171,10 @@ If you use `venv` to install `pyserial`, you need to activate `venv` before runn
 	
 	python3 /home/PATH/SyringeGUI_raspi.py	# Replace PATH with your path to locate the `SyringeGUI`
   
-Alternatively, you can use `Desktop Entry` as a shootcut to run `SyringeGUI` without operating `Terminal`. Please replace PATH on the distributed `SyringeGUI.desktop` file with your correct path. Then, please place the file on your desktop or somewhere and just click it.  
+*Alternatively, you can use `Desktop Entry` as a shootcut to run `SyringeGUI` without operating `Terminal`. Please replace PATH on the distributed `SyringeGUI.desktop` file with your correct path. Then, please place the file on your desktop or somewhere and just click it.*  
   
 
-The code for Raspberry Pi OS is distributed as `Syringe_GUI_raspi.py`, where the GUI appearance is optimized for `Raspberry Pi 7-inch Touch Screen Display` or its alternatives.  
+*The code for Raspberry Pi OS is distributed as `Syringe_GUI_raspi.py`, where the GUI appearance is optimized for `Raspberry Pi 7-inch Touch Screen Display` or its alternatives.*  
 
 <br>
 <br>	
@@ -212,8 +212,6 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 - **Rate Limitation**: For Arduino Uno/Nano based setups, ensure your Max Rate does not exceed the theoretical limit calculated in the `config-generator_v1`. Exceeding a 20kHz pulse frequency may cause the stepper motor to stall or behave unpredictably.
 
 - **Invert Direction**: Check this setting in the `config-generator_v1` if your pump moves in the opposite direction than expected.
-
-- **Syringe 
 
 <br>
 <br>
