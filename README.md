@@ -239,7 +239,7 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 
 
 
-
+<br>
 ⚠️ Setting Notes
 
 - **Rate Limitation**: For Arduino Uno/Nano based setups, ensure your Max Rate does not exceed the theoretical limit calculated in the `config-generator_v1`. Exceeding a 20kHz pulse frequency may cause the stepper motor to stall or behave unpredictably.
