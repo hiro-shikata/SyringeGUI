@@ -203,7 +203,9 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 2. Specify the values for **`Max rate (mm/min)`**, **`Accel (mm/sec²)`**, and **`Max Travel Distance (mm)`** according to the on-screen  instructions.  
 3. Fill out the settings for all active pumps. Alternatively, you can check the box at the top to instantly copy the configuration of Pump X to the other pump columns.  
 4. At **Tab 2: Syringe Settings**, you can register and manage your syringe profiles. You only need to provide a **`Name`**, **`Volume (mL)`**, and **`Length (mm)`** for each syringe.  
-*photo*  
+
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-add-syringe.jpg" width="500px">
+
    **Tip for Accuracy: For the highest precision, it is highly recommended to calibrate this value by measuring the weight of the dispensed water using a precision weighing scale (mass-to-volume calibration).**
    6. 5. Click **`Generate New Config File`** to save your settings. Save the generated file as `XXX.json` (replace XXX with your desired configuration name) into the directory **`~/SyringeGUI_Data/CONFIG`**.. 
   
@@ -229,10 +231,11 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 
     python3.XX SyringeGUI.py
 
-*photo*
 
 #### 3.1 Connect to the USB serial port  
-	
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_settings.jpg" width="600px">
+
+
 1. Navigate to the `Settings` tab.  
 2. In the Serial Port Settings section, click the combobox to display the available port tree.  
 3. Choose the same port used in the Arduino IDE (`/dev/cu.usbserial-XXXX` / `/dev/cu.usbmodem-XXXX` on Mac, `COMx` on Windows, `/dev/ttyACM0` on Raspberry Pi).   
@@ -259,6 +262,7 @@ By default, the path `~/SyringeGUI_Data/` is selected as the default save direct
 
 #### 3.4 Manual Control Tab
 Manually control your syringe pumps using the following features:
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_manual-control.jpg" width="800px">
 
 1. **Choose Pumps**:  
    Checkboxes are located at the top of the three columns named Pump X, Y, and Z. Checking them activates the respective pump for operation.  
@@ -290,10 +294,11 @@ Manually control your syringe pumps using the following features:
 10. **Log & Command window**:  
     Displays real-time serial communication between the app and the Arduino. You can also manually input GRBL-supported hex commands (e.g., enter `$$` to view the active GRBL core settings).  
 
-*photo*
 
 #### 3.5 Programmed Control  
 Execute sequential, complex automated profiles using this tab. You can load a custom CSV file to specify your sequence recipes.  
+
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control.jpg" width="600px">
 
 The configuration CSV file must follow this exact format:  
 `Pump, Start time (s), End time (s), Flow (µm/min)`
@@ -304,18 +309,17 @@ The configuration CSV file must follow this exact format:
 	X, 60, 120, 200
 	Y, 0, 120, 100
 	Z, 90, 120, 50
+  
+*Note: Only commas (`,`) must be used as delimiters to separate values in the CSV file.*  
+*Note: There is no restriction on the number of sequence rows.*  
+*Note: Only the specific pumps declared in the CSV recipe will engage in motion.*  
 
-*photo*  
-
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/CSV_example.jpg" width="400px">
 
 **How it executes:**
 - **From 0 to 60 sec**: Pump X moves at 100 µL/min, and Pump Y moves at 100 µL/min.
 - **From 60 to 90 sec**: Pump X accelerates to 200 µL/min, while Pump Y continues at 100 µL/min.
 - **From 90 to 120 sec**: Pump X runs at 200 µL/min, Pump Y runs at 100 µL/min, and Pump Z joins at 50 µL/min.
-
-*Note: Only commas (`,`) must be used as delimiters to separate values in the CSV file.*  
-*Note: There is no restriction on the number of sequence rows.*  
-*Note: Only the specific pumps declared in the CSV recipe will engage in motion.*  
 
 1. **File Selection**:  
    Click to choose your sequence recipe CSV file. Once loaded, the steps are populated as an ordered list and visually mapped on the right-hand timeline panels.   
@@ -326,7 +330,7 @@ The configuration CSV file must follow this exact format:
    **"RESUME"**: Restarts the sequence precisely from the paused timestamp.  
    **"ABORT"**: Triggers an emergency stop and resets the sequence recipe completely. 
 
-*photo*
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="600px">
 
 <br>
 <br>
@@ -345,7 +349,9 @@ To achieve maximum pumping accuracy, performing a physical calibration is highly
 7. Launch the **`Config-Generator`** utility, open your JSON config file, and update the Steps/mm field with this new calibrated value. 
 8. Save the file, reload it into SyringeGUI, and click **`Sync to Grbl EEPROM`** to commit the change to your hardware.
   
-*photo*  
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/before.jpg" width="300px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/after.jpg" width="330px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_calibration.jpg" width="310px">  
+
+In this case, current Steps/mm value was 6500. Caliburated value = 6500 x (100 / |14.20 - 115.75|) = 6400.8 Steps/mm
 <br>
 <br>
 
