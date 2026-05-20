@@ -6,8 +6,7 @@ This project provides you with the tools, **`SyringeGUI`** and its **`config-gen
 The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.
 
 
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px">
-
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_icon.png" width="150px">
 <br>
 <br>
 
