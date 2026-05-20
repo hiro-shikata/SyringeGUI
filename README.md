@@ -113,7 +113,7 @@ Open your terminal (Command Prompt/PowerShell for Windows) and follow these step
 
 	bash
 
-	git clone [https://github.com/hiro-shikata/SyringeGUI.git](https://github.com/hiro-shikata/SyringeGUI.git)  
+	git clone https://github.com/hiro-shikata/SyringeGUI.git
 	cd SyringeGUI
 
 #### Step 2: Update Python3  
