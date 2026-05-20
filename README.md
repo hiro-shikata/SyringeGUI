@@ -8,7 +8,10 @@ The coding for this project was assisted by AI. Please feel free to report any b
 
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
 
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="800px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_calculate-values.jpg" width="600px">
+<div align="center">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="800px">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_calculate-values.jpg" width="600px">
+</div>
 <br>
 <br>
 
@@ -192,22 +195,26 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 	python3 --version         			# Check the installed Python 3 version
     python3.XX config-generator_v1.py	# Replace XX with your actual version (e.g., python3.10)
 
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_input-value.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_calculate-values.jpg" width="500px">
+
 1. At **Tab 1: Pump Settings**, please choose a method to specify the **`Steps/mm` value**, which is the most crucial setting for this system.
    - **A. Step Angle**: Stepping motors rotate at a specific angle (e.g., 0.9°, 1.8°, or 18°) per step (pulse) received from the Arduino device. Please check the specifications of your stepping motor. For standard NEMA17 motors, this angle is typically **`1.8°`**.   
    - **B. Microstepping**: Specify the microstepping setting configured on your motor driver. This is determined by the jumper pin configuration on your CNC shield and the driver's specifications. For example, when using a DRV8825 driver on a CNC shield v3.0 with M0, M1, and M2 all set to HIGH (all three jumper pins set), it enables **`1/32`** microstepping.   
    - **C. Gear Ratio**: This setting is optional. Since general DIY syringe pumps do not utilize gears, simply enter **`1`** in this box. If your specific hardware setup includes a gear assembly between the motor and the lead screw, please specify that precise ratio.  
    - **D. Lead Screw Pitch**: You can enter the pitch value directly, or calculate it by measuring the number of threads within a specific physical length.  
 
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_input-value.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_calculate-values.jpg" width="500px">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/measure-pitch.jpg" width="350px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-calculate-leadscrew-pitch.jpg" width="350px">
 
 2. Specify the values for **`Max rate (mm/min)`**, **`Accel (mm/sec²)`**, and **`Max Travel Distance (mm)`** according to the on-screen  instructions.  
 3. Fill out the settings for all active pumps. Alternatively, you can check the box at the top to instantly copy the configuration of Pump X to the other pump columns.  
 4. At **Tab 2: Syringe Settings**, you can register and manage your syringe profiles. You only need to provide a **`Name`**, **`Volume (mL)`**, and **`Length (mm)`** for each syringe.  
 
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-add-syringe.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_updateed-syringe-list.jpg" width="500px">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/measure-syringe.jpg" width="400px"> 
+<br>
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-add-syringe.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_updated-syringe-list.jpg" width="500px">
 
    **Tip for Accuracy: For the highest precision, it is highly recommended to calibrate this value by measuring the weight of the dispensed water using a precision weighing scale (mass-to-volume calibration).**
-   6. 5. Click **`Generate New Config File`** to save your settings. Save the generated file as `XXX.json` (replace XXX with your desired configuration name) into the directory **`~/SyringeGUI_Data/CONFIG`**.. 
+   6. 5. Click **`Generate New Config File`** to save your settings. Save the generated file as `XXX.json` (replace XXX with your desired configuration name) into the directory **`~/SyringeGUI_Data/CONFIG`**.  
   
 - You can also modify existing JSON files using this app. It is easier to load the distributed default `onfig.json` first.  
 - You can generate and use multiple JSON files as needed (e.g., if you run different pump systems with a single controller).  
