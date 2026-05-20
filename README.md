@@ -2,11 +2,11 @@
 **Python-based GUI to control stepping motor-controlled syringe pumps.** 
 
 This project provides you with the tools, **`SyringeGUI`** and its **`config-generator`**, to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
+<div align="center">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
+</div>
 
 The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.
-
-
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="800px">
@@ -57,7 +57,9 @@ https://www.circuitist.com/how-to-set-driver-current-a4988-drv8825-tmc2208-tmc22
 
 To find the rated current, check the **datasheet of your stepping motor**. It is typically 0.8 - 2.0 A for NEMA17 stepping motors, which are commonly used in DIY syringe pumps. **If you do not know the specifications of your motor, start with 0.8A as Imax for safety**. For the DRV8825, a Vref value around 0.5V is usually optimal for controlling standard NEMA17 motors.
 
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/Vref-adjustment.jpg"  width="600px">
+</div>
 <br>
 <br>
 
@@ -80,8 +82,9 @@ Before running the **SyringeGUI** software, you need to **flash the Arduino with
 11. Click the **Upload** button (indicated by the right arrow icon `→`).  
 12. Once completed, your Arduino device is successfully flashed and ready to use!  
 
-
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/Arduino%20IDE.jpg"  width="600px">
+</div>
 <br>
 <br>	
 
@@ -195,7 +198,9 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 	python3 --version         			# Check the installed Python 3 version
     python3.XX config-generator_v1.py	# Replace XX with your actual version (e.g., python3.10)
 
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_input-value.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_calculate-values.jpg" width="500px">
+</div>
 
 1. At **Tab 1: Pump Settings**, please choose a method to specify the **`Steps/mm` value**, which is the most crucial setting for this system.
    - **A. Step Angle**: Stepping motors rotate at a specific angle (e.g., 0.9°, 1.8°, or 18°) per step (pulse) received from the Arduino device. Please check the specifications of your stepping motor. For standard NEMA17 motors, this angle is typically **`1.8°`**.   
@@ -203,15 +208,21 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
    - **C. Gear Ratio**: This setting is optional. Since general DIY syringe pumps do not utilize gears, simply enter **`1`** in this box. If your specific hardware setup includes a gear assembly between the motor and the lead screw, please specify that precise ratio.  
    - **D. Lead Screw Pitch**: You can enter the pitch value directly, or calculate it by measuring the number of threads within a specific physical length.  
 
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/measure-pitch.jpg" width="350px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-calculate-leadscrew-pitch.jpg" width="350px">
+</div>
 
 2. Specify the values for **`Max rate (mm/min)`**, **`Accel (mm/sec²)`**, and **`Max Travel Distance (mm)`** according to the on-screen  instructions.  
 3. Fill out the settings for all active pumps. Alternatively, you can check the box at the top to instantly copy the configuration of Pump X to the other pump columns.  
 4. At **Tab 2: Syringe Settings**, you can register and manage your syringe profiles. You only need to provide a **`Name`**, **`Volume (mL)`**, and **`Length (mm)`** for each syringe.  
 
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/measure-syringe.jpg" width="400px"> 
+</div>
 <br>
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-add-syringe.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_updated-syringe-list.jpg" width="500px">
+</div>
 
    **Tip for Accuracy: For the highest precision, it is highly recommended to calibrate this value by measuring the weight of the dispensed water using a precision weighing scale (mass-to-volume calibration).**
    6. 5. Click **`Generate New Config File`** to save your settings. Save the generated file as `XXX.json` (replace XXX with your desired configuration name) into the directory **`~/SyringeGUI_Data/CONFIG`**.  
@@ -240,8 +251,9 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 
 
 #### 3.1 Connect to the USB serial port  
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_settings.jpg" width="600px">
-
+</div>
 
 1. Navigate to the `Settings` tab.  
 2. In the Serial Port Settings section, click the combobox to display the available port tree.  
@@ -269,7 +281,9 @@ By default, the path `~/SyringeGUI_Data/` is selected as the default save direct
 
 #### 3.4 Manual Control Tab
 Manually control your syringe pumps using the following features:
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_manual-control.jpg" width="800px">
+</div>
 
 1. **Choose Pumps**:  
    Checkboxes are located at the top of the three columns named Pump X, Y, and Z. Checking them activates the respective pump for operation.  
@@ -304,11 +318,15 @@ Manually control your syringe pumps using the following features:
 
 #### 3.5 Programmed Control  
 Execute sequential, complex automated profiles using this tab. You can load a custom CSV file to specify your sequence recipes.  
-
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control.jpg" width="600px">
+</div>
+
+1. **File Selection**:  
+   Click to choose your sequence recipe CSV file. Once loaded, the steps are populated as an preview list and visually mapped on the right panels.   
 
 The configuration CSV file must follow this exact format:  
-`Pump, Start time (s), End time (s), Flow (µm/min)`
+`Pump, Start time (s), End time (s), Flow (µm/min)`  
 
 	Example recipe: 
 	
@@ -328,17 +346,16 @@ The configuration CSV file must follow this exact format:
 - **From 60 to 90 sec**: Pump X accelerates to 200 µL/min, while Pump Y continues at 100 µL/min.
 - **From 90 to 120 sec**: Pump X runs at 200 µL/min, Pump Y runs at 100 µL/min, and Pump Z joins at 50 µL/min.
 
-1. **File Selection**:  
-   Click to choose your sequence recipe CSV file. Once loaded, the steps are populated as an ordered list and visually mapped on the right-hand timeline panels.   
-
 2. **Execution**:  
    **"START SEQUENCE"**: Begin the sequence run.  
    **"PAUSE"**: Temporarily pauses the running sequence.  
    **"RESUME"**: Restarts the sequence precisely from the paused timestamp.  
    **"ABORT"**: Triggers an emergency stop and resets the sequence recipe completely. 
-
+ 
+<div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="600px">
-
+</div>
+ 
 <br>
 <br>
 
@@ -355,17 +372,25 @@ To achieve maximum pumping accuracy, performing a physical calibration is highly
    **`Calibrated Steps/mm = Current Steps/mm × (X / |A - B|)`**  
 7. Launch the **`Config-Generator`** utility, open your JSON config file, and update the Steps/mm field with this new calibrated value. 
 8. Save the file, reload it into SyringeGUI, and click **`Sync to Grbl EEPROM`** to commit the change to your hardware.
-  
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/before.jpg" width="300px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/after.jpg" width="330px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_calibration.jpg" width="310px">  
+
+<div align="center">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/before.jpg" width="300px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/after.jpg" width="330px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_calibration.jpg" width="310px"> 
+</div>
 
 In this case, current Steps/mm value was 6500. Caliburated value = 6500 x (100 / |14.20 - 115.75|) = 6400.8 Steps/mm
 <br>
 <br>
 
-# Fundings
-This project was supported by the grants from the `Japan Society for the Promotion of Science` (Grant# JP24H01499) and the `Kato Memorial Bioscience Foundation`.
+# License  
+Licensed under the MIT License.  
+
 <br>
 <br>
 
-# License
-Licensed under the MIT License.
+# Fundings  
+This project was supported by the grants from the `Japan Society for the Promotion of Science` (Grant# JP24H01499) and the `Kato Memorial Bioscience Foundation`.  
+<br>
+
+<div align="center">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/whole-system.jpg" width="600px">
+</div>
