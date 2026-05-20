@@ -6,7 +6,8 @@ This project provides you with the tools, **`SyringeGUI`** and its **`config-gen
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
 </div>
 
-The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it. Also, you can modify the scripts for your own works.
+The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.
+Also, you can modify the scripts for your own works.
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="800px">
