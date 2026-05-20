@@ -8,7 +8,7 @@ The coding for this project was assisted by AI. Please feel free to report any b
 
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
 
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="150px">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="800px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_calculate-values.jpg" width="600px">
 <br>
 <br>
 
