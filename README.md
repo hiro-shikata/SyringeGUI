@@ -78,7 +78,7 @@ Before running the **SyringeGUI** software, you need to **flash the Arduino with
 12. Once completed, your Arduino device is successfully flashed and ready to use!  
 
 
-*photo*
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/Arduino%20IDE.jpg"  width="600px">
 <br>
 <br>	
 
@@ -209,7 +209,8 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 - You can generate and use multiple JSON files as needed (e.g., if you run different pump systems with a single controller).  
 - If no JSON files are found in the directory, SyringeGUI will automatically fall back to its internal default settings.  
 
-*photo*
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_calculate-values.jpg" width="600px">
+
 
 ⚠️ Setting Notes
 
