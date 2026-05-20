@@ -54,7 +54,7 @@ https://www.circuitist.com/how-to-set-driver-current-a4988-drv8825-tmc2208-tmc22
 
 To find the rated current, check the **datasheet of your stepping motor**. It is typically 0.8 - 2.0 A for NEMA17 stepping motors, which are commonly used in DIY syringe pumps. **If you do not know the specifications of your motor, start with 0.8A as Imax for safety**. For the DRV8825, a Vref value around 0.5V is usually optimal for controlling standard NEMA17 motors.
 
-*Photo*
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/Vref-adjustment.jpg"  width="600px">
 <br>
 <br>
 
