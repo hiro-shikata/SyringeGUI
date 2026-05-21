@@ -1,13 +1,15 @@
 # SyringeGUI
-**Python-based GUI to control stepping motor-controlled syringe pumps.** 
+**An open-source, Python3-based GUI to control stepping motor-driven syringe pumps based on G-codes.** 
 
-This project provides you with the tools, **`SyringeGUI`** and its **`config-generator`**, to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
 </div>
 
-The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.  
-Also, you can modify the scripts for your own works.
+-  This project provides you with the tools, **`SyringeGUI`** and its **`config-generator`**, to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
+-  [Licensing](): **`SyringeGUI`** and **`config-generator`** are free software, released under the MIT license.  
+-  The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.  
+-  You can modify the scripts for your own works.
+-  **`config-generator`** might also be helpful for CNC users to determine Steps/mm values for the machine. 
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="800px">
@@ -384,12 +386,6 @@ To achieve maximum pumping accuracy, performing a physical calibration is highly
 </div>
 
 In this case, current Steps/mm value was 6500. Caliburated value = 6500 x (100 / |14.20 - 115.75|) = 6400.8 Steps/mm
-<br>
-<br>
-
-# License  
-Licensed under the MIT License.  
-
 <br>
 <br>
 
