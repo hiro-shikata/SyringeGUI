@@ -4,11 +4,12 @@
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
 </div>
+<br>
 
--  This project provides you with the tools, **`SyringeGUI`** and its **`config-generator`**, to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
--  [Licensing](https://github.com/hiro-shikata/SyringeGUI/blob/main/LICENSE): **`SyringeGUI`** and **`config-generator`** are free software, released under the MIT license.  
--  The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.  
--  You can modify the scripts for your own works.  
+-  This project provides you with the tools, **`SyringeGUI`** (latest ver2.4.1) and its **`config-generator` (latest ver1)**, to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
+-  [Licensing](https://github.com/hiro-shikata/SyringeGUI/blob/main/LICENSE): **`SyringeGUI`** and **`config-generator`** are free software, released under the MIT license.
+-  You can modify the scripts for your own works. 
+-  The coding for this project was assisted by AI. Any feedback including bugs and suggestions are welcome.   
 -  **`config-generator`** might also be helpful for CNC users to determine Steps/mm values for the machine. 
 
 <div align="center">
@@ -106,7 +107,7 @@ Prerequisites
 
   *This GUI is built using Python's standard `tkinter` library and `pyserial`.*  
     
-  *Alternatively, standalone pre-compiled packages (`.app` for Mac / `.exe` for Windows) are available. Since they are compiled with PyInstaller, Python 3 and its libraries are not required to run them. Please download from [compiled]().*  
+  *Alternatively, standalone pre-compiled packages (`.app` for Mac / `.exe` for Windows) are available. Since they are compiled with PyInstaller, Python 3 and its libraries are not required to run them. Please download from [releases](https://github.com/hiro-shikata/SyringeGUI/releases).*  
 
 
 ### 1. Multi-Platform Installation (Using Python 3)  
@@ -124,8 +125,10 @@ Open your terminal (Command Prompt/PowerShell for Windows) and follow these step
 
     pip3 install --upgrade pip  
 
-If you have not installed Python3, please download and install it from [python.org](https://www.python.org/downloads/) 
+If you have not installed Python3, please download and install it from [python.org](https://www.python.org/downloads/)  
+<br>
 
+  
 #### Step 3: Install Dependencies  
 
     pip install pyserial  
@@ -188,7 +191,7 @@ If you use `venv` to install `pyserial`, you need to activate `venv` before runn
 *Alternatively, you can use `Desktop Entry` as a shootcut to run `SyringeGUI` without operating `Terminal`. Please replace PATH on the distributed `SyringeGUI.desktop` file with your correct path. Then, please place the file on your desktop or somewhere and just click it.*  
   
 
-*The code for Raspberry Pi OS is distributed as `Syringe_GUI_raspi.py`, where the GUI appearance is optimized for `Raspberry Pi 7-inch Touch Screen Display` or its alternatives.*  
+*The code for Raspberry Pi OS is distributed as `Syringe_GUI_raspi.py` in `rasp` folder. That GUI appearance is optimized when `Raspberry Pi 7-inch Touch Screen Display` or its alternatives are used.*  
 
 <br>
 <br>	
@@ -232,6 +235,7 @@ Run the `config-generator` app to define your pump's mechanical settings (Steps/
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_how-to-add-syringe.jpg" width="500px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/cg_updated-syringe-list.jpg" width="500px">
 </div>
+<br>
 
    **Tip for Accuracy: For the highest precision, it is highly recommended to calibrate this value by measuring the weight of the dispensed water using a precision weighing scale (mass-to-volume calibration).**
    6. 5. Click **`Generate New Config File`** to save your settings. Save the generated file as `XXX.json` (replace XXX with your desired configuration name) into the directory **`~/SyringeGUI_Data/CONFIG`**.  
@@ -396,4 +400,7 @@ This project was supported by the grants from the `Japan Society for the Promoti
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/whole-system.jpg" width="600px">
+<br>
+A whole view of this system  
+(SyringeGUI run on RasberryPi OS connected to Arduino Uno + CNC shield v3.0 + Syringe Pumps)
 </div>
