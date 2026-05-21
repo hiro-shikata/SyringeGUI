@@ -1,5 +1,5 @@
 # SyringeGUI
-**An open-source, Python3-based GUI to control stepping motor-driven syringe pumps based on G-codes.** 
+**An open-source, Python3-based GUI to control stepping motor-driven syringe pumps with G-codes.** 
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_icon.png" width="150px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/config-generator_icon.png" width="150px">
