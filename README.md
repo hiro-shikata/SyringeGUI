@@ -8,7 +8,7 @@
 -  This project provides you with the tools, **`SyringeGUI`** and its **`config-generator`**, to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
 -  [Licensing](https://github.com/hiro-shikata/SyringeGUI/blob/main/LICENSE): **`SyringeGUI`** and **`config-generator`** are free software, released under the MIT license.  
 -  The coding for this project was assisted by AI. Please feel free to report any bugs to help me improve it.  
--  You can modify the scripts for your own works.
+-  You can modify the scripts for your own works.  
 -  **`config-generator`** might also be helpful for CNC users to determine Steps/mm values for the machine. 
 
 <div align="center">
@@ -20,12 +20,12 @@
 
 ## Hardware
 	
-- DIY **syringe pumps** consisting of **stepping motors (Bipolar/4-Wire)** and an actuator such as lead screws and sliders. 
-- Control devices: 1x **Arduino Uno/Nano** and **stepping motor drivers** (as many as needed) like DRV8825, A4988, etc.
-- Option: CNC shield v3.0 for Arduino Uno or CNC shield v4.0 for Arduino Nano  
+- DIY **syringe pumps** consisting of **`stepping motors (bipolar/4-wire)`** and an actuator such as lead screws and tables/sliders. 
+- Control devices: 1x **`Arduino Uno/Nano`** and **`stepping motor drivers`** (as many as needed) like DRV8825, A4988, etc.
+- Option: **`CNC shield v3.0`** for Arduino Uno or **`CNC shield v4.0`** for Arduino Nano  
   *Note: You can only use the highest microstepping for your stepper driver with the CNC shield v4.0 unless the board is modified.*
-- AC-to-DC converter (12V, at least 3A for 2 pumps).  
-- **Any computer that can run Python 3.10 or higher** (Mac, Win, Linux, or Raspberry Pi).
+- **`AC-to-DC converter`** (12 V, at least 3 A for 2 pumps).  
+- **`Any computer` that can run Python 3.10 or higher** (Mac, Win, Linux, or Raspberry Pi).
 
 You can find many great instructions on making DIY syringe pumps. To start this project, I was highly impressed and inspired by the [**"poseidon"**](https://github.com/pachterlab/poseidon) system.
 
@@ -35,15 +35,15 @@ You can find many great instructions on making DIY syringe pumps. To start this 
 4. https://reprap.org/wiki/Open-source_syringe_pump  
 5. https://www.mass-spec.ru/projects/diy/syringe_pump/eng/  
   
-Note: In this project, the mechanical syringe pump parts were obtained from a Chinese company.
+*Note: In this project, the mechanical syringe pump parts were obtained from a Chinese company.*  
 
 <br>
 <br>
 
 ### Technical Tips on Hardware preparation  
 #### 1. Assembly of Arduino Uno + CNC Shield v3.0 + Motor Drivers
-The details are well described in [**poseindon** system](https://github.com/pachterlab/poseidon). Here I just tell you techinical tips to adjust the **Vref** (reference voltage), which determines the maximum current flowing to the motor, for stepping motor drivers, such as DRV8825 and A4988. **Proper adjustment is critical to maximize motor performance while avoiding the overheating of the motors and drivers.**  
-* For this process, you will need a multimeter (electrical tester) to check the voltage.  
+The details are well described in [**poseindon** system](https://github.com/pachterlab/poseidon). Here I just tell you techinical tips to adjust the **`Vref`** (reference voltage), which determines the maximum current flowing to the motor, for stepping motor drivers, such as DRV8825 and A4988. **Proper adjustment is critical to maximize motor performance while avoiding the overheating of the motors and drivers.**  
+*For this process, you will need a multimeter (electrical tester) to check the voltage.*
 
 The following site could help you to calculate and set Vref.
 https://www.circuitist.com/how-to-set-driver-current-a4988-drv8825-tmc2208-tmc2209/
@@ -54,11 +54,11 @@ https://www.circuitist.com/how-to-set-driver-current-a4988-drv8825-tmc2208-tmc22
 
 > **`Vref = Imax × Rs × C × RF`**
 > - **Imax**: Rated current of the motor
-> - **Rs**: Sense resistor value (DRV8825: `0.1Ω`, A4988: `0.05-0.1Ω`)
+> - **Rs**: Sense resistor value (DRV8825: `0.1 Ω`, A4988: `0.05-0.1 Ω`)
 > - **C**: Coefficient specific to drivers (DRV8825: `5`, A4988: `8`) 
 > - **RF**: Reducing factor to keep the circuit safe (typically `0.8` - `0.9`)
 
-To find the rated current, check the **datasheet of your stepping motor**. It is typically 0.8 - 2.0 A for NEMA17 stepping motors, which are commonly used in DIY syringe pumps. **If you do not know the specifications of your motor, start with 0.8A as Imax for safety**. For the DRV8825, a Vref value around 0.5V is usually optimal for controlling standard NEMA17 motors.
+To find the rated current, check the **datasheet of your stepping motor**. It is typically `0.8 - 2.0 A` for NEMA17 stepping motors, which are commonly used in DIY syringe pumps. **If you do not know the specifications of your motor, start with `0.8 A` as Imax for safety**. For the DRV8825, a Vref value around `0.5 V` is usually optimal for controlling standard NEMA17 motors.
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/Vref-adjustment.jpg"  width="600px">
@@ -67,12 +67,12 @@ To find the rated current, check the **datasheet of your stepping motor**. It is
 <br>
 
 #### 2. Installation of GRBL Library into the Arduino Device
-Before running the **SyringeGUI** software, you need to **flash the Arduino with a sketch** that includes the script to control stepping motors via the GRBL library.  
+Before running the **SyringeGUI** software, you need to **flash your `Arduino` with a `sketch`** that includes the script to control stepping motors via the GRBL library.  
 
 **Steps (Verified on Arduino IDE 2.3.8 for macOS):**  
 1. Download and install the [Arduino IDE](https://www.arduino.cc/en/software/).  
 2. Download the [GRBL v1.1h library (grbl-1.1h.20190825.zip)](https://github.com/gnea/grbl/releases).  
-3. Unzip the ZIP file and find the internal "grbl" folder, zip **only** this internal folder again.   
+3. Unzip the ZIP file and find the internal `grbl` folder, zip **only** this internal folder again.   
 4. Open Arduino IDE -> `Sketch` -> `Include Library` -> `Add .ZIP Library...`    
 5. Select the zipped `grbl` file you just created.    
 6. Select `File` tab -> `Examples` -> `grbl` (usually found at the bottom) -> `grblUpload`.  
@@ -82,8 +82,9 @@ Before running the **SyringeGUI** software, you need to **flash the Arduino with
 9. Select `Tools` tab -> `Board:` -> Select **Arduino Uno** or **Nano**.  
 10. Select `Tools` tab -> `Port:` -> Select the USB serial port connected to the Arduino.  
 	*(e.g., `/dev/cu.usbserial-XXXX` or `/dev/cu.usbmodem-XXXX` on Mac; `COMx` on Windows)*  
-11. Click the **Upload** button (indicated by the right arrow icon `→`).  
-12. Once completed, your Arduino device is successfully flashed and ready to use!  
+	*In case that you use Arduino Nano, you might need to select "ATmega328P (Old Bootloader)" for `Processor:`.*  
+12. Click the **Upload** button (indicated by the right arrow icon `→`).  
+13. Once completed, your Arduino device is successfully flashed and ready to use!  
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/Arduino%20IDE.jpg"  width="600px">
@@ -95,8 +96,8 @@ Before running the **SyringeGUI** software, you need to **flash the Arduino with
 
 This project consists of two main tools:  
 
-- **SyringeGUI**: The main controller application for the syringe pumps.  
-- **Config Generator**: A utility to create and manage the `config.json` file for different mechanical setups and syringe types.  
+- **`SyringeGUI`**: The main controller application for the syringe pumps.  
+- **`config-generator`**: An utility to create and manage the `config.json` file for mechanical setups and syringe types.  
 
 Prerequisites  
 
@@ -105,7 +106,7 @@ Prerequisites
 
   *This GUI is built using Python's standard `tkinter` library and `pyserial`.*  
     
-  *Alternatively, standalone pre-compiled packages (`.app` for Mac / `.exe` for Windows) are available. Since they are compiled with PyInstaller, Python 3 and its libraries are not required to run them.*  
+  *Alternatively, standalone pre-compiled packages (`.app` for Mac / `.exe` for Windows) are available. Since they are compiled with PyInstaller, Python 3 and its libraries are not required to run them. Please download from [compiled]().*  
 
 
 ### 1. Multi-Platform Installation (Using Python 3)  
