@@ -390,7 +390,7 @@ To achieve maximum pumping accuracy, performing a physical calibration is highly
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/before.jpg" width="300px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/after.jpg" width="330px"> <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_calibration.jpg" width="310px"> 
 </div>
 
-In this case, current Steps/mm value was 6500. Caliburated value = 6500 x (100 / |14.20 - 115.75|) = 6400.8 Steps/mm
+In this case, current Steps/mm value was 6500. Calibrated value = 6500 x (100 / |14.20 - 115.75|) = 6400.8 Steps/mm
 <br>
 <br>
 
