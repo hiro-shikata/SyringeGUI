@@ -364,7 +364,7 @@ The configuration CSV file must follow this exact format:
 </div>
 
 2. **Execution**:  
-   **"START SEQUENCE"**: Begin the sequence run.  
+   **"START SEQUENCE"**: Begins the sequence run.  
    **"PAUSE"**: Temporarily pauses the running sequence.  
    **"RESUME"**: Restarts the sequence precisely from the paused timestamp.  
    **"ABORT"**: Triggers an emergency stop and resets the sequence recipe completely. 
