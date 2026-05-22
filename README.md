@@ -6,7 +6,7 @@
 </div>
 <br>
 
--  This project provides you with the tools, **`SyringeGUI`** (latest version: 2.4.1) and its **`config-generator` **(latest version: 1), to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
+-  This project provides you with the tools, **`SyringeGUI`** (latest version: 2.4.1) and its **`config-generator`** (latest version: 1), to control DIY syringe pumps (max. 3 pumps) connected to an Arduino device.  
 -  [Licensing](https://github.com/hiro-shikata/SyringeGUI/blob/main/LICENSE): **`SyringeGUI`** and **`config-generator`** are free software, released under the MIT license.
 -  You can modify the scripts for your own works. 
 -  The coding for this project was assisted by AI. Any feedback including bugs and suggestions are welcome.   
