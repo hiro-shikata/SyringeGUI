@@ -357,17 +357,17 @@ The configuration CSV file must follow this exact format:
 **How it executes:**
 - **From 0 to 60 sec**: Pump X moves at 100 µL/min, and Pump Y moves at 100 µL/min.
 - **From 60 to 90 sec**: Pump X accelerates to 200 µL/min, while Pump Y continues at 100 µL/min.
-- **From 90 to 120 sec**: Pump X runs at 200 µL/min, Pump Y runs at 100 µL/min, and Pump Z joins at 50 µL/min.
+- **From 90 to 120 sec**: Pump X runs at 200 µL/min, Pump Y runs at 100 µL/min, and Pump Z joins at 50 µL/min.  
+  
+<div align="center">
+<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="600px">
+</div>
 
 2. **Execution**:  
    **"START SEQUENCE"**: Begin the sequence run.  
    **"PAUSE"**: Temporarily pauses the running sequence.  
    **"RESUME"**: Restarts the sequence precisely from the paused timestamp.  
    **"ABORT"**: Triggers an emergency stop and resets the sequence recipe completely. 
- 
-<div align="center">
-<img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg" width="600px">
-</div>
  
 <br>
 <br>
