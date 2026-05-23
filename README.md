@@ -107,7 +107,7 @@ Prerequisites
 
   *This GUI is built using Python's standard `tkinter` library and `pyserial`.*  
     
-  *Alternatively, standalone pre-compiled packages (`.app` for Mac / `.exe` for Windows) are available. Since they are compiled with PyInstaller, Python 3 and its libraries are not required to run them. Please download from [releases](https://github.com/hiro-shikata/SyringeGUI/releases).*  
+  ***Alternatively, standalone pre-compiled packages (`.app` for Mac / `.exe` for Windows) are available. Since they are compiled with PyInstaller, Python 3 and its libraries are not required to run them. Please download from [releases](https://github.com/hiro-shikata/SyringeGUI/releases).***  
 
 
 ### 1. Multi-Platform Installation (Using Python 3)  
