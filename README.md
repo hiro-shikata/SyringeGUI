@@ -10,7 +10,8 @@
 -  [Licensing](https://github.com/hiro-shikata/SyringeGUI/blob/main/LICENSE): **`SyringeGUI`** and **`config-generator`** are free software, released under the MIT license.
 -  You can modify the scripts for your own works. 
 -  The coding for this project was assisted by AI. Any feedback including bugs and suggestions are welcome.   
--  **`config-generator`** might also be helpful for CNC users to determine Steps/mm values for the machine. 
+-  **`config-generator`** might also be helpful for CNC users to determine Steps/mm values for the machine.
+-  Standalone pre-compiled packages (`.app` / `.exe`) are available from [releases](https://github.com/hiro-shikata/SyringeGUI/releases).
 
 <div align="center">
 <img src="https://github.com/hiro-shikata/SyringeGUI/blob/main/media/SyringeGUI_programmed-control_recipe-loaded.jpg?raw=true" width="800px">
