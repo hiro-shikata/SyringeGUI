@@ -1,2 +1,5 @@
 theme: jekyll-theme-primer
-google_analytics: "G-1BDY65PJWZ"
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-1BDY65PJWZ"
